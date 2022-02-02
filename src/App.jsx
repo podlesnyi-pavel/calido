@@ -12,7 +12,9 @@ const App = () => {
   };
 
   const updateValue = (e) => {
+    e.preventDefault();
     const { value } = e.target;
+
     if (!isNaN(+value) && !value.includes(' ')) {
       setValue(value);
     }
