@@ -12,9 +12,8 @@ const App = () => {
   };
 
   const updateValue = (e) => {
-    console.log(e);
     const { value } = e.target;
-    if (!isNaN(+value) && e.nativeEvent.data !== ' ') {
+    if (!isNaN(+value) && !value.includes(' ')) {
       setValue(value);
     }
   };
@@ -22,7 +21,11 @@ const App = () => {
   const updateArr = () => {
     setArr([
       ...arr,
-      {id: arr.length++, name: name, value: value * 100}
+      {
+        id: arr.length++,
+        name: name,
+        value: value * 100
+      },
     ]);
 
     setName('');
