@@ -12,7 +12,7 @@ const App = () => {
   };
 
   const updateValue = (e) => {
-    e.preventDefault();
+    
     const { value } = e.target;
 
     if (!isNaN(+value)) {
@@ -20,7 +20,9 @@ const App = () => {
     }
   };
 
-  const updateArr = () => {
+  const updateArr = (e) => {
+    e.preventDefault();
+  
     setArr([
       ...arr,
       {
