@@ -12,11 +12,10 @@ const App = () => {
   };
 
   const updateValue = (e) => {
-    console.log(e);
     e.preventDefault();
     const { value } = e.target;
 
-    if (!isNaN(+value) && e.nativeEvent.data !== ' ') {
+    if (!isNaN(+value)) {
       setValue(value);
     }
   };
