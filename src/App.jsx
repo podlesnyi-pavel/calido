@@ -12,10 +12,11 @@ const App = () => {
   };
 
   const updateValue = (e) => {
+    console.log(e);
     e.preventDefault();
     const { value } = e.target;
 
-    if (!isNaN(+value) && !value.includes(' ')) {
+    if (!isNaN(+value) && e.nativeEvent.data !== ' ') {
       setValue(value);
     }
   };
