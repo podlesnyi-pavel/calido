@@ -43,7 +43,7 @@ const App = () => {
         updateValue={updateValue}
         updateArr={updateArr}
       />
-      <Table arr={arr} />
+      {!!arr.length && <Table arr={arr} />}
     </div>
   );
 }
