@@ -11,7 +11,7 @@ export const Table = ({ arr }) => {
       </thead>
       <tbody>
         {arr.map(obj => (
-          <tr key={new Date()}>
+          <tr key={obj.id}>
             <td>{obj.name}</td>
             <td>{obj.value}</td>
           </tr>
